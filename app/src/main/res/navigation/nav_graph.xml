@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/bankDetailsFragment"
+        android:name="com.example.profilemodule.Fragments.BankDetailsFragment"
+        android:label="fragment_bank_details"
+        tools:layout="@layout/fragment_bank_details" />
+    <fragment
+        android:id="@+id/careSupportDetails"
+        android:name="com.example.profilemodule.Fragments.CareSupportDetails"
+        android:label="fragment_care_support_details"
+        tools:layout="@layout/fragment_care_support_details" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.profilemodule.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instituteDetailsFragment"
+        android:name="com.example.profilemodule.Fragments.InstituteDetailsFragment"
+        android:label="fragment_institute_details"
+        tools:layout="@layout/fragment_institute_details" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.profilemodule.Fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_instituteDetailsFragment"
+            app:destination="@id/instituteDetailsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_subscriptionsFragment"
+            app:destination="@id/subscriptionsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_bankDetailsFragment"
+            app:destination="@id/bankDetailsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_userDetailsFragment2"
+            app:destination="@id/userDetailsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_careSupportDetails"
+            app:destination="@id/careSupportDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.profilemodule.Fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/subscriptionsFragment"
+        android:name="com.example.profilemodule.Fragments.SubscriptionsFragment"
+        android:label="fragment_subscriptions"
+        tools:layout="@layout/fragment_subscriptions" />
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.profilemodule.Fragments.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" />
+</navigation>
